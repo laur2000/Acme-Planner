@@ -1,22 +1,553 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--
-- sample-data.xml
--
-- Copyright (C) 2012-2021 Rafael Corchuelo.
--
-- In keeping with the traditional purpose of furthering education and research, it is
-- the policy of the copyright owner to permit non-commercial use and redistribution of
-- this software. It has been tested carefully, but it is not guaranteed for any particular
-- purposes.  The copyright owner does not offer any warranties or representations, nor do
-- they accept any liabilities with respect to them.
--->
+<!-- - sample-data.xml - - Copyright (C) 2012-2021 Rafael Corchuelo. - - 
+	In keeping with the traditional purpose of furthering education and research, 
+	it is - the policy of the copyright owner to permit non-commercial use and 
+	redistribution of - this software. It has been tested carefully, but it is 
+	not guaranteed for any particular - purposes. The copyright owner does not 
+	offer any warranties or representations, nor do - they accept any liabilities 
+	with respect to them. -->
 
-<beans 
-	xmlns="http://www.springframework.org/schema/beans" 
+<beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<import resource="classpath:/WEB-INF/population/conversion-service.xml"/>	
+	<import
+		resource="classpath:/WEB-INF/population/conversion-service.xml" />
+
+	<!-- Authenticated user 1 -->
+
+	<bean name="authenticatedUserAccount"
+		class="acme.framework.entities.UserAccount">
+		<property name="username" value="authenticated" />
+		<property name="password" value="authenticated" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Autenth" />
+				<property name="surname" value="Icated" />
+				<property name="email" value="authenticated@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="authenticatedAuthenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="authenticatedAuthenticated"
+		class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="authenticatedUserAccount" />
+	</bean>
+
+	<!-- Authenticated user 2 -->
+
+	<bean name="authenticatedUserAccount2"
+		class="acme.framework.entities.UserAccount">
+		<property name="username" value="authenticated2" />
+		<property name="password" value="authenticated2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Autenth" />
+				<property name="surname" value="Icatedtwo" />
+				<property name="email" value="authenticated2@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="authenticatedAuthenticated2" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="authenticatedAuthenticated2"
+		class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="authenticatedUserAccount2" />
+	</bean>
+
+	<!-- Authenticated user 3 -->
+
+	<bean name="authenticatedUserAccount3"
+		class="acme.framework.entities.UserAccount">
+		<property name="username" value="authenticated3" />
+		<property name="password" value="authenticated3" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Autenth" />
+				<property name="surname" value="Icatedthree" />
+				<property name="email" value="authenticated3@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="authenticatedAuthenticated3" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="authenticatedAuthenticated3"
+		class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="authenticatedUserAccount3" />
+	</bean>
+
+	<!-- Manager user 1 -->
+
+	<bean name="managerUserAccount1"
+		class="acme.framework.entities.UserAccount">
+		<property name="username" value="manager1" />
+		<property name="password" value="manager1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="John" />
+				<property name="surname" value="Dow" />
+				<property name="email" value="johndoe@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="managerRole1" />
+				<ref bean="authenticatedManagerRole1" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="managerRole1" class="acme.entities.roles.Manager">
+		<property name="userAccount" ref="managerUserAccount1" />
+		<property name="sector" value="Informatic" />
+		<property name="company" value="Acme" />
+	</bean>
+
+	<bean name="authenticatedManagerRole1"
+		class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="managerUserAccount1" />
+	</bean>
+
+	<!-- Manager user 2 -->
+
+	<bean name="managerUserAccount2"
+		class="acme.framework.entities.UserAccount">
+		<property name="username" value="manager2" />
+		<property name="password" value="manager2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Will" />
+				<property name="surname" value="Acmen" />
+				<property name="email" value="will@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="managerRole2" />
+				<ref bean="authenticatedManagerRole2" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="managerRole2" class="acme.entities.roles.Manager">
+		<property name="userAccount" ref="managerUserAccount2" />
+		<property name="sector" value="Finance" />
+		<property name="company" value="MecMec" />
+	</bean>
+
+	<bean name="authenticatedManagerRole2"
+		class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="managerUserAccount2" />
+	</bean>
+
+	<!-- Shouts -->
+
+	<!-- Shouts: older than one month -->
+
+	
+	
+	<bean id="shout01" class="acme.entities.shout.Shout">
+		<property name="author" value="Alexander Hamilton" />
+		<property name="text" value="I'm not throwing away my shot!" />
+		<property name="moment" value="2015/01/01 01:00" />
+		<property name="info">
+			<null />
+		</property>
+	</bean>
+
+	<bean id="shout02" class="acme.entities.shout.Shout">
+		<property name="moment" value="2015/01/01 02:00" />
+		<property name="author" value="Jane Doe" />
+		<property name="text" value="I'm the master of my room!" />
+		<property name="info" value="http://www.example.org" />
+	</bean>
+
+	<bean id="shout03" class="acme.entities.shout.Shout">
+		<property name="moment" value="2015/01/01 03:00" />
+		<property name="author" value="John Doe" />
+		<property name="text" value="I'm happy!" />
+		<property name="info">
+			<null />
+		</property>
+	</bean>
+	
+	<bean id="shout04" class="acme.entities.shout.Shout">
+		<property name="moment" value="2015/01/01 04:00" />
+		<property name="author" value="Peter Parker" />
+		<property name="text" value="I'm amazing!" />
+		<property name="info" value="http://www.example.org" />
+	</bean>
+
+	<bean id="shout05" class="acme.entities.shout.Shout">
+		<property name="moment" value="2015/01/01 05:00" />
+		<property name="author" value="Foo Bar" />
+		<property name="text" value="Just turning 50!" />
+		<property name="info" value="http://happybirthday.com" />
+	</bean>
+
+	<bean id="shout06" class="acme.entities.shout.Shout">
+		<property name="author" value="Leslie Design-Testing" />
+		<property name="text" value="Woa! This app's so cool!" />
+		<property name="moment" value="2015/01/01 06:00" />
+		<property name="info" value="http://www.sample-app.com" />
+	</bean>
+	
+
+	<!-- Shouts: newer than one month -->
+
+	<bean id="shout07" class="acme.entities.shout.Shout">
+		<property name="moment" value="2021/08/19 01:00" />
+		<property name="author" value="Guillermo Diz" />
+		<property name="text"
+			value="I'm sad because I haven't found Leslie..." />
+		<property name="info">
+			<null />
+		</property>
+	</bean>
+
+	<bean id="shout08" class="acme.entities.shout.Shout">
+		<property name="moment" value="2021/08/19 02:00" />
+		<property name="author" value="Carmen María" />
+		<property name="text" value="I love cinema!" />
+		<property name="info">
+			<null />
+		</property>
+	</bean>
+
+	<bean id="shout09" class="acme.entities.shout.Shout">
+		<property name="author" value="Odd Della Robbia" />
+		<property name="text"
+			value="Our laptop is very mindboggingly strange! " />
+		<property name="moment" value="2021/08/19 03:00" />
+		<property name="info" value="http://www.google.com" />
+	</bean>
+
+	<bean id="shout10" class="acme.entities.shout.Shout">
+		<property name="author" value="Jeremy Belpois" />
+		<property name="text"
+			value="I can't get tired of publishing shouts!" />
+		<property name="moment" value="2021/08/19 04:00" />
+		<property name="info" value="http://www.ifscl.com" />
+	</bean>
+
+	<bean id="shout11" class="acme.entities.shout.Shout">
+		<property name="author" value="Ulrich Stern" />
+		<property name="text" value="Hey, come and get into Lyoko!" />
+		<property name="moment" value="2021/08/19 05:00" />
+		<property name="info" value="http://www.facebook.com" />
+	</bean>
+
+	<bean id="shout12" class="acme.entities.shout.Shout">
+		<property name="author" value="Aelita Stones" />
+		<property name="text"
+			value="Jeremy, please save me! the Schyphozoa is coming for me!!" />
+		<property name="moment" value="2021/08/19 06:00" />
+		<property name="info" value="http://www.twitter.com" />
+	</bean>
+
+	<bean id="shout13" class="acme.entities.shout.Shout">
+		<property name="author" value="William Dunbar" />
+		<property name="text"
+			value="This is so easy for me, come and fight me, XANA monsters!" />
+		<property name="moment" value="2021/08/19 07:00" />
+		<property name="info" value="http://www.twitter.com" />
+	</bean>
+
+	
+
+	<!-- Tasks -->
+
+	<!-- Tasks: public and closed -->
+
+	<bean id="task01" class="acme.entities.task.Task">
+		<property name="title"
+			value="Process graham crackers, mix with sugar, salt, butter " />
+		<property name="description"
+			value="Pulse the graham crackers in a food processor or blender until finely ground. Put in a large bowl, and stir in the sugar and salt. Stir in the melted butter. Preheat oven to 350°F (175°C), with rack in lower third of oven." />
+		<property name="workload" value="1.00" />
+		<property name="link"
+			value="https://www.simplyrecipes.com/recipes/perfect_cheesecake/" />
+		<property name="startPeriod" value="2021/04/13 12:30" />
+		<property name="endPeriod" value="2021/04/13 14:30" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="manager" ref="managerRole2" />
+	</bean>
+
+	<bean id="task02" class="acme.entities.task.Task">
+		<property name="title"
+			value="Press the graham cracker crumbs into the bottom of the springform pan" />
+		<property name="description"
+			value="Use a 9” x 2-3/4” round springform pan. Gently press down on the crumbs using your fingers, until the crumbs are a nice even layer at the bottom of the pan, with maybe just a slight rise along the inside edges of the pan." />
+		<property name="workload" value="1.00" />
+		<property name="link"
+			value="https://www.simplyrecipes.com/recipes/perfect_cheesecake/" />
+		<property name="startPeriod" value="2021/04/20 14:30" />
+		<property name="endPeriod" value="2021/04/20 15:30" />
+		<property name="visibility" value="PRIVATE" />
+		<property name="manager" ref="managerRole1" />
+	</bean>
+
+	<bean id="task03" class="acme.entities.task.Task">
+		<property name="title" value="Bake the crust" />
+		<property name="description"
+			value="Place the pan on a baking sheet and bake at 350°F (175°C) for 10 minutes. Remove from the oven and let cool. While the crust is cooling, you can skip ahead and start on the filling. Wait until the crust has cooled to wrap the pan in foil in the next step." />
+		<property name="workload" value="8.00" />
+		<property name="link"
+			value="" />
+		<property name="startPeriod" value="2021/04/23 14:00" />
+		<property name="endPeriod" value="2021/04/24 15:15" />
+		<property name="visibility" value="PRIVATE" />
+		<property name="manager" ref="managerRole2" />
+	</bean>
+
+	<bean id="task04" class="acme.entities.task.Task">
+		<property name="title" value="Beat cream cheese, then sugar" />
+		<property name="description"
+			value="Cut the cream cheese into chunks and place in the bowl of an electric mixer, with the paddle attachment. Mix on medium speed for 4 minutes until smooth, soft and creamy. Add the sugar, beat for 4 minutes more." />
+		<property name="workload" value="8.00" />
+		<property name="link"
+			value="" />
+		<property name="startPeriod" value="2021/04/24 00:30" />
+		<property name="endPeriod" value="2021/04/25 01:15" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="manager" ref="managerRole1" />
+	</bean>
+
+	<bean id="task05" class="acme.entities.task.Task">
+		<property name="title" value="Prepare the sour cream topping" />
+		<property name="description"
+			value="Place sour cream in a medium sized bowl, stir in the powdered sugar and vanilla, until smooth. Chill until you are ready to serve the cake." />
+		<property name="workload" value="99.59" />
+		<property name="link"
+			value="https://www.simplyrecipes.com/recipes/perfect_cheesecake/" />
+		<property name="startPeriod" value="2019/04/24 07:30" />
+		<property name="endPeriod" value="2021/04/24 09:15" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="manager" ref="managerRole2" />
+	</bean>
+
+	<bean id="task06" class="acme.entities.task.Task">
+		<property name="title" value="Prepare the raspberry sauce" />
+		<property name="description"
+			value="Place raspberries, sugar, and water in a small saucepan. Use a potato masher to mash the raspberries. Heat on medium, whisking, about 5 minutes, until the sauce begins to thicken. Remove from heat. Let cool." />
+		<property name="workload" value="0.00" />
+		<property name="link"
+			value="https://www.simplyrecipes.com/recipes/perfect_cheesecake/" />
+		<property name="startPeriod" value="2021/04/25 14:30" />
+		<property name="endPeriod" value="2021/04/25 16:30" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="manager" ref="managerRole1" />
+	</bean>
+
+	<bean id="task07" class="acme.entities.task.Task">
+		<property name="title"
+			value="Prepare the cheesecake to serve" />
+		<property name="description"
+			value="Remove the cake from the refrigerator. Remove the foil from the sides of the pan, and place the cake on your cake serving dish. Run the side of a blunt knife between the edge of the cake and the pan." />
+		<property name="workload" value="0.02" />
+		<property name="link"
+			value="https://www.simplyrecipes.com/recipes/perfect_cheesecake/" />
+		<property name="startPeriod" value="2021/04/25 17:30" />
+		<property name="endPeriod" value="2021/04/25 18:15" />
+		<property name="visibility" value="PRIVATE" />
+		<property name="manager" ref="managerRole2" />
+	</bean>
+
+	<bean id="task08" class="acme.entities.task.Task">
+		<property name="title" value="Sauté the onion and garlic" />
+		<property name="description"
+			value="Heat the olive oil in a large skillet over medium. Add 3/4 of the sliced onion and sauté until nearly tender, about 5 minutes. Add the garlic and sauté to soften, 2 minutes." />
+		<property name="workload" value="0.02" />
+		<property name="link"
+			value="https://www.simplyrecipes.com/recipes/perfect_cheesecake/" />
+		<property name="startPeriod" value="2021/04/25 19:30" />
+		<property name="endPeriod" value="2021/04/25 20:15" />
+		<property name="visibility" value="PRIVATE" />
+		<property name="manager" ref="managerRole1" />
+	</bean>
+
+	<bean id="task09" class="acme.entities.task.Task">
+		<property name="title" value="Blend the sauce" />
+		<property name="description"
+			value="Transfer the cooked onion and garlic to a blender along with the beans, including the bean liquid, chipotle, lime juice, cumin, salt, and 1/2 cup water. Blend until smooth and creamy. Taste and add more salt if needed, then blend again." />
+		<property name="workload" value="99.00" />
+		<property name="link"
+			value="https://www.simplyrecipes.com/recipes/perfect_cheesecake/" />
+		<property name="startPeriod" value="2021/04/26 00:30" />
+		<property name="endPeriod" value="2023/04/26 01:15" />
+		<property name="visibility" value="PRIVATE" />
+		<property name="manager" ref="managerRole2" />
+	</bean>
+
+	<!-- Tasks: private and closed -->
+
+	<bean id="task10" class="acme.entities.task.Task">
+		<property name="title"
+			value="Triple wrap pan in heavy duty foil" />
+		<property name="description"
+			value="Prepare the springform pan so that no water leaks into it while cooking. Place a large 18-inch by 18-inch square of heavy duty aluminum foil on a flat surface. Place the springform pan in the middle of the foil. Gently fold up the sides of the foil around the pan. Make sure to do this gently so that you don't create any holes in the foil." />
+		<property name="workload" value="89.59" />
+		<property name="link"
+			value="https://www.simplyrecipes.com/recipes/perfect_cheesecake/" />
+		<property name="startPeriod" value="2021/04/25 20:10" />
+		<property name="endPeriod" value="2023/04/25 22:30" />
+		<property name="visibility" value="PRIVATE" />
+		<property name="manager" ref="managerRole1" />
+	</bean>
+
+	<!-- Tasks: public and opened -->
+
+	<bean id="task11" class="acme.entities.task.Task">
+		<property name="title"
+			value="Add salt, vanilla, then eggs, then sour cream" />
+		<property name="description"
+			value="Add the salt and vanilla, beating after each addition. Add the eggs, one at a time, beating on medium low speed for one minute after each addition. Add the sour cream, beat until incorporated." />
+		<property name="workload" value="1.00" />
+		<property name="link"
+			value="https://www.simplyrecipes.com/recipes/perfect_cheesecake/" />
+		<property name="startPeriod" value="2021/05/13 14:30" />
+		<property name="endPeriod" value="2021/05/13 17:00" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="manager" ref="managerRole2" />
+	</bean>
+
+	<bean id="task12" class="acme.entities.task.Task">
+		<property name="title" value="Add the heavy cream" />
+		<property name="description"
+			value="Beat until incorporated. Remember to scrape down the sides of the mixer bowl, and scrape up any thicker bits of cream cheese that have stuck to the bottom of the mixer that paddle attachment has failed to incorporate." />
+		<property name="workload" value="1.0" />
+		<property name="link"
+			value="https://www.simplyrecipes.com/recipes/perfect_cheesecake/" />
+		<property name="startPeriod" value="2021/06/13 19:30" />
+		<property name="endPeriod" value="2021/06/13 20:30" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="manager" ref="managerRole1" />
+	</bean>
+
+	<bean id="task13" class="acme.entities.task.Task">
+		<property name="title" value="Prepare pan and boiling water" />
+		<property name="description"
+			value="Place the foil-wrapped springform pan in a large, high-sided roasting pan. Prepare 2 quarts of boiling water. Heat the oven to 325°F (160°C)." />
+		<property name="workload" value="0.5" />
+		<property name="link"
+			value="" />
+		<property name="startPeriod" value="2021/06/13 20:30" />
+		<property name="endPeriod" value="2021/06/13 21:30" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="manager" ref="managerRole2" />
+	</bean>
+
+	<bean id="task14" class="acme.entities.task.Task">
+		<property name="title" value="Pour filling into pan" />
+		<property name="description"
+			value="Pour the cream cheese filling into the springform pan, over the graham cracker bottom layer. Smooth the top with a rubber spatula." />
+		<property name="workload" value="1.00" />
+		<property name="link"
+			value="https://www.simplyrecipes.com/recipes/perfect_cheesecake/" />
+		<property name="startPeriod" value="2021/06/13 21:30" />
+		<property name="endPeriod" value="2021/06/13 22:30" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="manager" ref="managerRole1" />
+	</bean>
+
+	<bean id="task15" class="acme.entities.task.Task">
+		<property name="title" value="Place in oven" />
+		<property name="description"
+			value="Place the roasting pan with the springform pan in it, in the oven, on the lower rack." />
+		<property name="workload" value="34.20" />
+		<property name="link"
+			value="https://www.simplyrecipes.com/recipes/perfect_cheesecake/" />
+		<property name="startPeriod" value="2021/06/13 22:30" />
+		<property name="endPeriod" value="2022/06/13 23:30" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="manager" ref="managerRole2" />
+	</bean>
+
+	<bean id="task16" class="acme.entities.task.Task">
+		<property name="title"
+			value="Carefully pour the hot water into the roasting pan." />
+		<property name="description"
+			value="(Without touching the hot oven), to create a water bath for the cheesecake, pouring until the water reaches halfway up the side of the springform pan, about 1 1/4 inches. (Alternatively you can add the water before putting the pan in the oven, whichever is easier for you.)" />
+		<property name="workload" value="41.32" />
+		<property name="link"
+			value="https://www.simplyrecipes.com/recipes/perfect_cheesecake/" />
+		<property name="startPeriod" value="2021/06/13 23:30" />
+		<property name="endPeriod" value="2021/06/14 00:30" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="manager" ref="managerRole1" />
+	</bean>
+
+	<bean id="task17" class="acme.entities.task.Task">
+		<property name="title"
+			value="Bake at 325°F (160°C) for 1 1/2 hours" />
+		<property name="description" value="Hot stuff!" />
+		<property name="workload" value="99.00" />
+		<property name="link"
+			value="https://www.simplyrecipes.com/recipes/perfect_cheesecake/" />
+		<property name="startPeriod" value="2021/06/14 00:30" />
+		<property name="endPeriod" value="2023/06/14 01:30" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="manager" ref="managerRole2" />
+	</bean>
+
+	<bean id="task018" class="acme.entities.task.Task">
+		<property name="title" value="A" />
+		<property name="description"
+			value="Crack open the oven door 1-inch, and let the cake cool in the oven, as the oven cools, for another hour. This gentle cooling will help prevent the cheesecake surface from cracking." />
+		<property name="workload" value="5.31" />
+		<property name="link"
+			value="https://www.simplyrecipes.com/recipes/perfect_cheesecake/" />
+		<property name="startPeriod" value="2021/06/13 01:30" />
+		<property name="endPeriod" value="2023/06/13 02:30" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="manager" ref="managerRole1" />
+	</bean>
+
+	<bean id="task019" class="acme.entities.task.Task">
+		<property name="title" value="Chill 4 hours" />
+		<property name="description"
+			value="Cover the top of the cheesecake with foil, so that it doesn't actually touch the cheesecake. Chill in the refrigerator for a minimum of 4 hours, or overnight." />
+		<property name="workload" value="3.00" />
+		<property name="link"
+			value="http://example.org" />
+		<property name="startPeriod" value="2021/06/13 02:30" />
+		<property name="endPeriod" value="2021/06/13 07:30" />
+		<property name="visibility" value="PUBLIC" />
+		<property name="manager" ref="managerRole2" />
+	</bean>
+
+	<!-- Tasks: private and opened -->
+
+	<bean id="task020" class="acme.entities.task.Task">
+		<property name="title" value="Chill 4 hours" />
+		<property name="description"
+			value="Cover the top of the cheesecake with foil, so that it doesn't actually touch the cheesecake. Chill in the refrigerator for a minimum of 4 hours, or overnight." />
+		<property name="workload" value="1.00" />
+		<property name="link"
+			value="https://www.simplyrecipes.com/recipes/perfect_cheesecake/" />
+		<property name="startPeriod" value="2021/06/13 02:30" />
+		<property name="endPeriod" value="2021/06/13 03:30" />
+		<property name="visibility" value="PRIVATE" />
+		<property name="manager" ref="managerRole1" />
+	</bean>
 
 </beans>

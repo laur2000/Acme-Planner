@@ -1,0 +1,22 @@
+
+manager.task.list.label.title = Title:
+manager.task.list.label.workload = Workload
+manager.task.list.label.link = Link:
+manager.task.list.label.start_period = Start
+manager.task.list.label.end_period = End
+manager.task.list.label.visibility = Visibility
+
+manager.task.form.label.title = Title:
+manager.task.form.label.description = Description:
+manager.task.form.label.workload = Workload
+manager.task.form.label.link = Link:
+manager.task.form.label.start_period = Start
+manager.task.form.label.end_period = End
+manager.task.form.label.visibility = Visibility
+manager.task.form.button.return = Return
+
+
+manager.task.form.button.update = Update task
+manager.task.form.button.create = Create task
+manager.task.form.button.delete = Delete task
+

@@ -1,5 +1,5 @@
 <%--
-- form.jsp
+- list.jsp
 -
 - Copyright (C) 2012-2021 Rafael Corchuelo.
 -
@@ -15,11 +15,13 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form>
-	<acme:form-textbox code="authenticated.provider.form.label.company" path="company"/>
-	<acme:form-textbox code="authenticated.provider.form.label.sector" path="sector"/>
-	
-	<acme:form-submit test="${command == 'create'}" code="authenticated.provider.form.button.create" action="/authenticated/provider/create"/>
-	<acme:form-submit test="${command == 'update'}" code="authenticated.provider.form.button.update" action="/authenticated/provider/update"/>
-	<acme:form-return code="authenticated.provider.form.button.return"/>
-</acme:form>
+<acme:list>
+	<acme:list-column code="manager.task.list.label.title" path="title" />
+	<acme:list-column code="manager.task.list.label.workload" path="workload" />
+	<acme:list-column code="manager.task.list.label.link" path="link" />
+	<acme:list-column code="manager.task.list.label.start_period" path="startPeriod" />
+	<acme:list-column code="manager.task.list.label.end_period" path="endPeriod" />
+	<acme:list-column code="manager.task.list.label.visibility" path="visibility" />
+</acme:list>
+
+
