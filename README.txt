@@ -8,7 +8,6 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-This is the Starter Project, which is intended to be a core learning asset for the students
-who have enroled the Design and Testing subject of the Software Engineering curriculum of the 
-University of Sevilla.  This project helps them start working on their new information system 
-projects.
+The project Acme Workplans consist in creating/editing/deleting/listing tasks and workplans, it is very useful for managers. 
+
+https://github.com/laur2000/Acme-WorkPlans
