@@ -37,6 +37,7 @@ acme.validation.decimal-min = Debe ser mayor o igual que {0}
 acme.validation.digits = Debe tener {0} dígitos y {1} decimales
 acme.validation.max = Debe ser menor o igual que {0}
 acme.validation.min = Debe ser mayor o igual que {0}
+acme.validation.spam = Este texto contiene demasiadas palabras consideradas spam
 acme.validation.pattern = Debe encajar en el patrón "{0}"
 acme.validation.length = La longitud debe ser entre {0} y {1}
 acme.validation.range = Debe estar entre {0} y {1}

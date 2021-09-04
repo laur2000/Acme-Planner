@@ -37,6 +37,7 @@ acme.validation.decimal-min = Must be greater than or equal to {0}
 acme.validation.digits = Must have {0} digits and {1} decimals
 acme.validation.max = Must be less than or equal to {0}
 acme.validation.min = Must be greater than or equal to {0}
+acme.validation.spam = The message contains too many words detected as spam
 acme.validation.pattern = Must match pattern "{0}"
 acme.validation.length = Length must be between {0} and {1}
 acme.validation.range = Must be between {0} and {1}

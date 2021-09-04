@@ -15,6 +15,7 @@ package acme.features.anonymous.userAccount;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.features.administrator.spam.SpamFilterService;
 import acme.framework.components.Errors;
 import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
@@ -32,6 +33,9 @@ public class AnonymousUserAccountCreateService implements AbstractCreateService<
 
 	@Autowired
 	protected AnonymousUserAccountRepository repository;
+	
+	@Autowired
+	private SpamFilterService spamService;
 
 
 	@Override
@@ -95,6 +99,11 @@ public class AnonymousUserAccountCreateService implements AbstractCreateService<
 
 		isDuplicated = this.repository.findOneUserAccountByUsername(entity.getUsername()) != null;
 		errors.state(request, !isDuplicated, "username", "anonymous.user-account.error.duplicated");
+		
+		this.spamService.validate(request, "username", entity.getUsername(), errors);
+		this.spamService.validate(request, "identity.name", entity.getIdentity().getName(), errors);
+		this.spamService.validate(request, "identity.surname", entity.getIdentity().getSurname(), errors);
+		this.spamService.validate(request, "identity.email", entity.getIdentity().getEmail(), errors);
 
 		passwordLength = request.getModel().getString("password").length();
 		errors.state(request, passwordLength >= 5 && passwordLength <= 60, "password", "acme.validation.length", 6, 60);
