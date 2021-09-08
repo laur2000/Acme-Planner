@@ -16,7 +16,7 @@ master.banner.background = #E3E3E3
 
 master.welcome.title = ¡Bienvenidos!
 master.welcome.text = \
-	¡Bienvenidos a Acme Planner! tu primer proyecto en D&T.
+	¡Bienvenidos a Acme Workplans! Un servicio para administrar tareas y planes de trabajo.
 
 # master.menu #################################################################
 

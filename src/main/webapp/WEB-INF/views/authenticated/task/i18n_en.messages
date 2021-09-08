@@ -1,0 +1,16 @@
+
+authenticated.task.list.label.title = Title:
+authenticated.task.list.label.workload = Workload
+authenticated.task.list.label.link = Link:
+authenticated.task.list.label.start_period = Start
+authenticated.task.list.label.end_period = End
+authenticated.task.list.label.visibility = Visibility
+
+authenticated.task.form.label.title = Title:
+authenticated.task.form.label.description = Description:
+authenticated.task.form.label.workload = Workload
+authenticated.task.form.label.link = Link:
+authenticated.task.form.label.start_period = Start
+authenticated.task.form.label.end_period = End
+authenticated.task.form.label.visibility = Visibility
+authenticated.task.form.button.return = Return
