@@ -43,6 +43,7 @@ master.menu.administrator = Administrator
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.spam-threshold = Spam threshold
+master.menu.administrator.spam-configuration = Spam Configuration
 master.menu.administrator.spam-words = Spam words
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)

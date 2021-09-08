@@ -1,0 +1,27 @@
+# i18n_es.messages
+#
+# Copyright (C) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.title.show = Panel de indicadores
+
+administrator.dashboard.form.title.general-indicators = Indicadores generales
+administrator.dashboard.form.label.total-number-public-tasks =  Número total de tareas públicas
+administrator.dashboard.form.label.total-number-private-tasks =  Número total de tareas privadas
+administrator.dashboard.form.label.total-number-finished-tasks =  Número total de tareas terminadas
+administrator.dashboard.form.label.total-number-non-finished-tasks =  Número total de tareas sin terminar
+administrator.dashboard.form.title.execution-period= Indicadores del período de ejecución 
+administrator.dashboard.form.label.average-number-task-execution-period =  Período medio de ejecución de las tareas
+administrator.dashboard.form.label.deviation-number-task-execution-period =  Período de desviación de ejecución de las tareas
+administrator.dashboard.form.label.minimum-number-task-execution-period =  Período mínimo de ejecución de las tareas
+administrator.dashboard.form.label.maximum-number-task-execution-period =  Período máximo de ejecución de las tareas
+administrator.dashboard.form.title.workloads= Indicadores de la carga de trabajo 
+administrator.dashboard.form.label.average-number-task-workloads =  Carga de trabajo media de las tareas
+administrator.dashboard.form.label.deviation-number-task-workloads =  Desviación de la carga de trabajo de las tareas
+administrator.dashboard.form.label.minimum-number-task-workloads =  Carga de trabajo mínima de las tareas
+administrator.dashboard.form.label.maximum-number-task-workloads =  Carga de trabajo máxima de las tareas

@@ -44,6 +44,7 @@ master.menu.administrator.dashboard = Panel de indicadores
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.spam-threshold = Umbral de spam
 master.menu.administrator.spam-words = Palabras spam
+master.menu.administrator.spam-configuration = Configuración Spam
 master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shutdown = Parar el sistema
