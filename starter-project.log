@@ -792,3 +792,19 @@ INFO [acme.framework.utilities.DatabasePopulator] > Persisting task018 = acme.en
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting task019 = acme.entities.task.Task{id=50, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting task020 = acme.entities.task.Task{id=51, version=0}
 INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Workplans].[jsp]] at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\bogda\AppData\Local\Temp\tomcat.8080.5852796481368077919\work\Tomcat\localhost\Acme-Workplans\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\bogda\AppData\Local\Temp\tomcat.8080.5852796481368077919\work\Tomcat\localhost\Acme-Workplans\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Workplans].[dispatcherServlet]] at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103): Unable to compile class for JSP: 
+An error occurred at line: [18] in the generated java file: [C:\Users\bogda\AppData\Local\Temp\tomcat.8080.5852796481368077919\work\Tomcat\localhost\Acme-Workplans\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Provider resolves to a package
+An error occurred at line: [19] in the generated java file: [C:\Users\bogda\AppData\Local\Temp\tomcat.8080.5852796481368077919\work\Tomcat\localhost\Acme-Workplans\org\apache\jsp\WEB_002dINF\views\framework\page_jsp.java]
+Only a type can be imported. acme.entities.roles.Consumer resolves to a package
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Workplans].[jsp]] at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:435): org.apache.jsp.WEB_002dINF.views.framework.page_jsp
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Workplans].[dispatcherServlet]] at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:435): org.apache.jsp.WEB_002dINF.views.framework.page_jsp
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost]] at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: ServletException including path '/WEB-INF/views/framework/page.jsp'.
+at org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): ServletException including path '/WEB-INF/views/framework/page.jsp'.
+at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): ServletException including path '/WEB-INF/views/framework/page.jsp'.
+at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:435): org.apache.jsp.WEB_002dINF.views.framework.page_jsp
