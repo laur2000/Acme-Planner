@@ -22,7 +22,7 @@
 	<description>This is a project to manage workplans and tasks.</description>
 
 	<artifactId>Acme-Workplans</artifactId>
-	<version>21.6</version>
+	<version>21.9</version>
 	<packaging>war</packaging>
 
 	<parent>
