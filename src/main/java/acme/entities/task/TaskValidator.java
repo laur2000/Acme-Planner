@@ -24,12 +24,13 @@ public class TaskValidator {
 		if (target.getWorkload() != null) {
 			try {
 				workLoad = HoursAndMinutes.fromFormattedTime(target.getWorkload()).getDecimalTime();
+				errors.state(request, target.getWorkload() <= 99.59, "workload", "acme.validation.workload-exceeded");
 			} catch (final Exception e) {
 				errors.state(request, false, "workload", "acme.validation.invalid-time-format");
 			}
 		}
 
-		errors.state(request, target.getWorkload() <= 99.59, "workload", "acme.validation.workload-exceeded");
+		
 
 		if (startPeriod != null && endPeriod != null) {
 			final Date now = Date.from(Instant.now());

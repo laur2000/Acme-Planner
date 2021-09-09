@@ -1,0 +1,7 @@
+threshold,words
+0.01,"sex,cialis,viagra"
+0.10,"as ssex,ci al  is,viaa gra"
+51.23,"sex ,  ci alis,viagra, aaaaa0"
+60.00,"s  ex,ci  alis,via  gra"
+100.00,"se x,ciali  s,via  gra"
+99.99,"se  x,ci  alis,v  iagra"

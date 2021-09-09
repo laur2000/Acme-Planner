@@ -1,0 +1,2 @@
+totalNumberOfPublicTasks,totalNumberOfPrivateTasks,totalNumberOfFinishedTasks,totalNumberOfNonFinishedTasks,averageNumberOfTaskExecutionPeriods,deviationNumberOfTaskExecutionPeriods,minimumNumberOfTaskExecutionPeriods,maximumNumberOfTaskExecutionPeriods,averageNumberOfTaskWorkloads,deviationNumberOfTaskWorkloads,minimumNumberOfTaskWorkloads,maximumNumberOfTaskWorkloads
+13,7,15,5,200d 23h 2min,315d 14h 9min,0h 45min,731d 1h 45min,1d 0h 41min,1h 7min,0h 0min,4d 3h 35min
