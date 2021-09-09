@@ -10,4 +10,4 @@
 
 The project Acme Workplans consist in creating/editing/deleting/listing tasks and workplans, it is very useful for managers. 
 
-https://github.com/laur2000/Acme-WorkPlans
+https://github.com/laur2000/Acme-WorkPlans/releases/tag/1.0
