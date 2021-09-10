@@ -20,7 +20,7 @@ anonymous.shout.list.label.author = Author
 anonymous.shout.list.label.text = Text
 anonymous.shout.list.label.info = Info
 
-anonymous.shout.list.label.trackid = Trackid
+anonymous.shout.list.label.mark = Mark
 anonymous.shout.list.label.deadline = Deadline
 anonymous.shout.list.label.budget = Budget
 anonymous.shout.list.label.important = Important

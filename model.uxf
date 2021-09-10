@@ -248,7 +248,7 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>406</x>
+      <x>378</x>
       <y>77</y>
       <w>259</w>
       <h>84</h>
@@ -546,11 +546,42 @@ bg=blue</panel_attributes>
     <coordinates>
       <x>357</x>
       <y>119</y>
-      <w>63</w>
+      <w>35</w>
       <h>28</h>
     </coordinates>
     <panel_attributes>lt=..
 </panel_attributes>
-    <additional_attributes>10.0;20.0;70.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;30.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>707</x>
+      <y>77</y>
+      <w>259</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Burse
+--
++ mark: String {NotNull, Unique, Pattern(^\w{2}\d{2}-mmddyy$}
++ deadline: Date {NotNull, Future}
++ budget: Money {NotNull, Positive, EUR|USD|GBP}
++ important: Boolean {NotNull}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>119</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
   </element>
 </diagram>

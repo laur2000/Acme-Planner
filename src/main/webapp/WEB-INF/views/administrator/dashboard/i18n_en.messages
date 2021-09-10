@@ -27,3 +27,12 @@ administrator.dashboard.form.label.minimum-number-task-workloads =  Minimum task
 administrator.dashboard.form.label.maximum-number-task-workloads =  Maximum task workloads
 
 
+administrator.dashboard.form.title.burse-indicators = Burse indicators
+administrator.dashboard.form.label.ratio-burse-important = Ratio burse important
+administrator.dashboard.form.label.ratio-burse-budget = Ratio burse budget zero
+administrator.dashboard.form.label.avg-burse-eur = Average EUR amount
+administrator.dashboard.form.label.avg-burse-usd = Average USD amount
+administrator.dashboard.form.label.avg-burse-gbp = Average GBP amount
+administrator.dashboard.form.label.dev-burse-usd = Deviation USD amount
+administrator.dashboard.form.label.dev-burse-eur = Deviation EUR amount
+administrator.dashboard.form.label.dev-burse-gbp = Deviation GBP amount

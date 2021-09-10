@@ -25,3 +25,13 @@ administrator.dashboard.form.label.average-number-task-workloads =  Carga de tra
 administrator.dashboard.form.label.deviation-number-task-workloads =  Desviación de la carga de trabajo de las tareas
 administrator.dashboard.form.label.minimum-number-task-workloads =  Carga de trabajo mínima de las tareas
 administrator.dashboard.form.label.maximum-number-task-workloads =  Carga de trabajo máxima de las tareas
+
+administrator.dashboard.form.title.burse-indicators = Indicadores burse
+administrator.dashboard.form.label.ratio-burse-important = Ratio burse importantes
+administrator.dashboard.form.label.ratio-burse-budget = Ratio burse presupuesto cero
+administrator.dashboard.form.label.avg-burse-eur = Media de EUR
+administrator.dashboard.form.label.avg-burse-usd = Media de USD
+administrator.dashboard.form.label.avg-burse-gbp = Media de GBP
+administrator.dashboard.form.label.dev-burse-usd = Deviacion de USD
+administrator.dashboard.form.label.dev-burse-eur = Deviacion de EUR
+administrator.dashboard.form.label.dev-burse-gbp = Deviacion de GBP

@@ -20,6 +20,11 @@
 	<acme:form-textarea code="anonymous.shout.form.label.text" path="text" placeholder="This is a shout!"/>
 	<acme:form-textbox code="anonymous.shout.form.label.info" path="info" placeholder="http://example.org"/>
 	
+	<acme:form-textbox code="anonymous.shout.list.label.mark" path="burse.mark" placeholder="xx00-091021"/>
+	<acme:form-moment code="anonymous.shout.list.label.deadline" path="burse.deadline"/>
+	<acme:form-money code="anonymous.shout.list.label.budget" path="burse.budget"/>
+	<acme:form-checkbox code="anonymous.shout.list.label.important" path="burse.important" />
+	
 	<acme:form-submit code="anonymous.shout.form.button.create" action="/anonymous/shout/create"/>
   	<acme:form-return code="anonymous.shout.form.button.return"/>
 </acme:form>

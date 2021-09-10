@@ -47,3 +47,7 @@ acme.validation.start-after-end = La fecha de inicio no puede ser posterior a la
 acme.validation.invalid-time-format = Formato de tiempo inválido. Use hh.mm
 acme.validation.too-big-workload = La carga de trabajo no puede ser mayor que el periodo de ejecución
 acme.validation.workload-exceeded = La cargade trabajo no puede superar las 99h
+acme.validation.burse-pattern = Debe adherirse al patrón “^\w{2}\d{2}-mmddyy$” (donde las y hacen referencia al año actual, las m al mes actual, y las d al dia actual);
+acme.validation.burse-budget = Divisas validas son USD o EUR o GBP
+acme.validation.burse-deadline = La fecha limite debe estar al menos una semana despues de la creacion del grito.
+acme.validation.burse-unique = La marca debe ser unica

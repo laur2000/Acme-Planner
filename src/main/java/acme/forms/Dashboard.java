@@ -23,5 +23,14 @@ public class Dashboard implements Serializable {
 	String deviationNumberOfTaskWorkloads;
 	String minimumNumberOfTaskWorkloads;
 	String maximumNumberOfTaskWorkloads;
+	
+	String ratioBurseImportant;
+	String ratioBurseBudgetZero;
+	String averageBurseEurBudget;
+	String averageBurseUsdBudget;
+	String averageBurseGbpBudget;
+	String deviationBurseEurBudget;
+	String deviationBurseUsdBudget;
+	String deviationBurseGbpBudget;
 
 }

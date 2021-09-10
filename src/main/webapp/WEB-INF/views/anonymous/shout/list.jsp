@@ -21,4 +21,9 @@
 	<acme:list-column code="anonymous.shout.list.label.info" path="info" />
 	<acme:list-column code="anonymous.shout.list.label.text" path="text"/>
 	
+	<acme:list-column code="anonymous.shout.list.label.mark" path="burse.mark" />
+	<acme:list-column code="anonymous.shout.list.label.deadline" path="burse.deadline" />
+	<acme:list-column code="anonymous.shout.list.label.budget" path="burse.budget" />
+	<acme:list-column code="anonymous.shout.list.label.important" path="burse.important"/>
+	
 </acme:list>

@@ -47,3 +47,7 @@ acme.validation.start-after-end = Start period cannot be after end period
 acme.validation.invalid-time-format = Invalid time format. Use hh.mm
 acme.validation.too-big-workload = Workload cannot be greater than the task period
 acme.validation.workload-exceeded = Workload cannot be greather than 99h
+acme.validation.burse-pattern = Adhere to pattern “^\w{2}\d{2}-mmddyy$” (where the y’s refer to the current year, the m’s to the current month, and the d’s to the current day);
+acme.validation.burse-budget = Valid currencies are USD or EUR
+acme.validation.burse-deadline = The deadline must be at least one week after when the shout is created
+acme.validation.burse-unique = The mark must be unique

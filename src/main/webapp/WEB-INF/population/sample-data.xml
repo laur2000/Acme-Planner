@@ -165,6 +165,7 @@
 
 	
 	
+	
 	<bean id="shout01" class="acme.entities.shout.Shout">
 		<property name="author" value="Alexander Hamilton" />
 		<property name="text" value="I'm not throwing away my shot!" />
@@ -172,14 +173,22 @@
 		<property name="info">
 			<null />
 		</property>
+		<property name="burse" ref="burse01" />
+		
 	</bean>
 
+	
+	
 	<bean id="shout02" class="acme.entities.shout.Shout">
 		<property name="moment" value="2015/01/01 02:00" />
 		<property name="author" value="Jane Doe" />
 		<property name="text" value="I'm the master of my room!" />
 		<property name="info" value="http://www.example.org" />
+		<property name="burse" ref="burse02" />
+
+		
 	</bean>
+	
 
 	<bean id="shout03" class="acme.entities.shout.Shout">
 		<property name="moment" value="2015/01/01 03:00" />
@@ -188,28 +197,39 @@
 		<property name="info">
 			<null />
 		</property>
+		<property name="burse" ref="burse03" />
 	</bean>
+	
+	
 	
 	<bean id="shout04" class="acme.entities.shout.Shout">
 		<property name="moment" value="2015/01/01 04:00" />
 		<property name="author" value="Peter Parker" />
 		<property name="text" value="I'm amazing!" />
 		<property name="info" value="http://www.example.org" />
+		<property name="burse" ref="burse04" />
 	</bean>
+	
+	
 
 	<bean id="shout05" class="acme.entities.shout.Shout">
 		<property name="moment" value="2015/01/01 05:00" />
 		<property name="author" value="Foo Bar" />
 		<property name="text" value="Just turning 50!" />
 		<property name="info" value="http://happybirthday.com" />
+		<property name="burse" ref="burse05" />
 	</bean>
+	
+	
 
 	<bean id="shout06" class="acme.entities.shout.Shout">
 		<property name="author" value="Leslie Design-Testing" />
 		<property name="text" value="Woa! This app's so cool!" />
 		<property name="moment" value="2015/01/01 06:00" />
 		<property name="info" value="http://www.sample-app.com" />
+		<property name="burse" ref="burse06" />
 	</bean>
+	
 	
 
 	<!-- Shouts: newer than one month -->
@@ -222,8 +242,11 @@
 		<property name="info">
 			<null />
 		</property>
+		<property name="burse" ref="burse07" />
 	</bean>
 
+	
+	
 	<bean id="shout08" class="acme.entities.shout.Shout">
 		<property name="moment" value="2021/08/19 02:00" />
 		<property name="author" value="Carmen María" />
@@ -231,38 +254,53 @@
 		<property name="info">
 			<null />
 		</property>
+		<property name="burse" ref="burse08" />
 	</bean>
 
+	
+	
 	<bean id="shout09" class="acme.entities.shout.Shout">
 		<property name="author" value="Odd Della Robbia" />
 		<property name="text"
 			value="Our laptop is very mindboggingly strange! " />
 		<property name="moment" value="2021/08/19 03:00" />
 		<property name="info" value="http://www.google.com" />
+		<property name="burse" ref="burse09" />
 	</bean>
 
+	
+	
 	<bean id="shout10" class="acme.entities.shout.Shout">
 		<property name="author" value="Jeremy Belpois" />
 		<property name="text"
 			value="I can't get tired of publishing shouts!" />
 		<property name="moment" value="2021/08/19 04:00" />
 		<property name="info" value="http://www.ifscl.com" />
+		<property name="burse" ref="burse10" />
 	</bean>
+	
+	
 
 	<bean id="shout11" class="acme.entities.shout.Shout">
 		<property name="author" value="Ulrich Stern" />
 		<property name="text" value="Hey, come and get into Lyoko!" />
 		<property name="moment" value="2021/08/19 05:00" />
 		<property name="info" value="http://www.facebook.com" />
+		<property name="burse" ref="burse11" />
 	</bean>
 
+	
+	
 	<bean id="shout12" class="acme.entities.shout.Shout">
 		<property name="author" value="Aelita Stones" />
 		<property name="text"
 			value="Jeremy, please save me! the Schyphozoa is coming for me!!" />
 		<property name="moment" value="2021/08/19 06:00" />
 		<property name="info" value="http://www.twitter.com" />
+		<property name="burse" ref="burse12" />
 	</bean>
+	
+	
 
 	<bean id="shout13" class="acme.entities.shout.Shout">
 		<property name="author" value="William Dunbar" />
@@ -270,6 +308,7 @@
 			value="This is so easy for me, come and fight me, XANA monsters!" />
 		<property name="moment" value="2021/08/19 07:00" />
 		<property name="info" value="http://www.twitter.com" />
+		<property name="burse" ref="burse13" />
 	</bean>
 
 	
@@ -550,4 +589,95 @@
 		<property name="manager" ref="managerRole1" />
 	</bean>
 
+	<bean id="burse01" class="acme.entities.burse.Burse">
+		<property name="mark" value="aa00-010835" />
+		<property name="deadline" value="2035/01/08 01:00" />
+		<property name="budget" value="GBP 3" />
+		<property name="important" value="true" />
+		<property name="shout" ref="shout01" />
+	</bean>
+	<bean id="burse02" class="acme.entities.burse.Burse">
+		<property name="mark" value="aa01-020125" />
+		<property name="deadline" value="2025/02/01 01:00" />
+		<property name="budget" value="EUR 9" />
+		<property name="important" value="true" />		
+		<property name="shout" ref="shout02" />
+	</bean>
+	<bean id="burse03" class="acme.entities.burse.Burse">
+		<property name="mark" value="aa02-030125" />
+		<property name="deadline" value="2025/03/01 01:20" />
+		<property name="budget" value="GBP 11" />
+		<property name="important" value="true" />
+		<property name="shout" ref="shout03" />
+	</bean>
+	<bean id="burse04" class="acme.entities.burse.Burse">
+		<property name="mark" value="aa03-030625" />
+		<property name="deadline" value="2025/03/06 01:20" />
+		<property name="budget" value="EUR 8" />
+		<property name="important" value="true" />
+		<property name="shout" ref="shout04" />
+	</bean>
+	<bean id="burse05" class="acme.entities.burse.Burse">
+		<property name="mark" value="aa04-020625" />
+		<property name="deadline" value="2025/02/06 01:20" />
+		<property name="budget" value="EUR 12" />
+		<property name="important" value="false" />
+		<property name="shout" ref="shout05" />
+	</bean>
+	<bean id="burse06" class="acme.entities.burse.Burse">
+		<property name="mark" value="aa05-020625" />
+		<property name="deadline" value="2025/02/06 03:20" />
+		<property name="budget" value="USD 100" />
+		<property name="important" value="true" />
+		<property name="shout" ref="shout06" />
+	</bean>
+	<bean id="burse07" class="acme.entities.burse.Burse">
+		<property name="mark" value="aa06-091921" />
+		<property name="deadline" value="2021/09/19 01:00" />
+		<property name="budget" value="USD 90" />
+		<property name="important" value="false" />
+		<property name="shout" ref="shout07" />
+	</bean>
+	<bean id="burse08" class="acme.entities.burse.Burse">
+		<property name="mark" value="aa07-092721" />
+		<property name="deadline" value="2021/09/27 02:00" />
+		<property name="budget" value="USD 110" />
+		<property name="important" value="false" />
+		<property name="shout" ref="shout08" />
+	</bean>
+	<bean id="burse09" class="acme.entities.burse.Burse">
+		<property name="mark" value="aa08-091921" />
+		<property name="deadline" value="2021/09/19 01:00" />
+		<property name="budget" value="EUR 100" />
+		<property name="important" value="true" />
+		<property name="shout" ref="shout09" />
+	</bean>
+	<bean id="burse10" class="acme.entities.burse.Burse">
+		<property name="mark" value="aa09-091921" />
+		<property name="deadline" value="2021/09/19 01:00" />
+		<property name="budget" value="EUR 100" />
+		<property name="important" value="false" />
+		<property name="shout" ref="shout10" />
+	</bean>
+	<bean id="burse11" class="acme.entities.burse.Burse">
+		<property name="mark" value="aa10-091921" />
+		<property name="deadline" value="2021/09/19 01:00" />
+		<property name="budget" value="USD 88" />
+		<property name="important" value="true" />
+		<property name="shout" ref="shout11" />
+	</bean>
+	<bean id="burse12" class="acme.entities.burse.Burse">
+		<property name="mark" value="aa11-091921" />
+		<property name="deadline" value="2021/09/19 01:00" />
+		<property name="budget" value="EUR 30" />
+		<property name="important" value="false" />
+		<property name="shout" ref="shout12" />
+	</bean>
+	<bean id="burse13" class="acme.entities.burse.Burse">
+		<property name="mark" value="aa12-091921" />
+		<property name="deadline" value="2021/09/19 01:00" />
+		<property name="budget" value="USD 112" />
+		<property name="important" value="true" />
+		<property name="shout" ref="shout13" />
+	</bean>
 </beans>

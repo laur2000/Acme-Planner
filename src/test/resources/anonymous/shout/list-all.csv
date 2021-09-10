@@ -1,8 +1,8 @@
-recordIndex,moment,author,text,info
-0,2021/08/19 07:00,William Dunbar,http://www.twitter.com,"This is so easy for me, come and fight me, XANA monsters!"
-1,2021/08/19 06:00,Aelita Stones,http://www.twitter.com,"Jeremy, please save me! the Schyphozoa is coming for me!!"
-2,2021/08/19 05:00,Ulrich Stern,http://www.facebook.com,"Hey, come and get into Lyoko!"
-3,2021/08/19 04:00,Jeremy Belpois,http://www.ifscl.com,I can't get tired of publishing shouts!
-4,2021/08/19 03:00,Odd Della Robbia,http://www.google.com,Our laptop is very mindboggingly strange!
-5,2021/08/19 02:00,Carmen María,,I love cinema!
-6,2021/08/19 01:00,Guillermo Diz,,I'm sad because I haven't found Leslie...
+recordIndex,moment,author,text,info,mark,deadline,budget,important
+0,2021/08/19 07:00,William Dunbar,http://www.twitter.com,"This is so easy for me, come and fight me, XANA monsters!",aa12-091921,2021/09/19 01:00,USD 112.00,true
+1,2021/08/19 06:00,Aelita Stones,http://www.twitter.com,"Jeremy, please save me! the Schyphozoa is coming for me!!",aa11-091921,2021/09/19 01:00,EUR 30.00,false
+2,2021/08/19 05:00,Ulrich Stern,http://www.facebook.com,"Hey, come and get into Lyoko!",aa10-091921,2021/09/19 01:00,USD 88.00,true
+3,2021/08/19 04:00,Jeremy Belpois,http://www.ifscl.com,I can't get tired of publishing shouts!,aa09-091921,2021/09/19 01:00,EUR 100.00,false
+4,2021/08/19 03:00,Odd Della Robbia,http://www.google.com,Our laptop is very mindboggingly strange!,aa08-091921,2021/09/19 01:00,EUR 100.00,true
+5,2021/08/19 02:00,Carmen María,,I love cinema!,aa07-092721,2021/09/27 02:00,USD 110.00,false
+6,2021/08/19 01:00,Guillermo Diz,,I'm sad because I haven't found Leslie...,aa06-091921,2021/09/19 01:00,USD 90.00,false

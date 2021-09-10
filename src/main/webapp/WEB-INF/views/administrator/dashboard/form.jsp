@@ -58,6 +58,80 @@
 </table>
 
 <h2>
+	<acme:message code="administrator.dashboard.form.title.burse-indicators"/>
+</h2>
+
+<table class="table table-sm">
+	<caption>
+		<acme:message code="administrator.dashboard.form.title.burse-indicators"/>
+	</caption>	
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.ratio-burse-important"/>
+		</th>
+		<td>
+			<acme:form-textbox readonly="true" code="" path="ratioBurseImportant" />
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.ratio-burse-budget"/>
+		</th>
+		<td>
+			<acme:form-textbox readonly="true" code="" path="ratioBurseBudgetZero" />
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.avg-burse-eur"/>
+		</th>
+		<td>
+			<acme:form-textbox readonly="true" code="" path="averageBurseEurBudget" />
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.dev-burse-eur"/>
+		</th>
+		<td>
+			<acme:form-textbox readonly="true" code="" path="deviationBurseEurBudget" />
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.avg-burse-usd"/>
+		</th>
+		<td>
+			<acme:form-textbox readonly="true" code="" path="averageBurseUsdBudget" />
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.dev-burse-usd"/>
+		</th>
+		<td>
+			<acme:form-textbox readonly="true" code="" path="deviationBurseUsdBudget" />
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.avg-burse-gbp"/>
+		</th>
+		<td>
+			<acme:form-textbox readonly="true" code="" path="averageBurseGbpBudget" />
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.dev-burse-gbp"/>
+		</th>
+		<td>
+			<acme:form-textbox readonly="true" code="" path="deviationBurseGbpBudget" />
+		</td>
+	</tr>
+</table>
+
+<h2>
 	<acme:message code="administrator.dashboard.form.title.execution-period"/>
 </h2>
 <table class="table table-sm">
